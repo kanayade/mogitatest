@@ -1,0 +1,128 @@
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.register-form__content {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.register-form__heading h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.form__group {
+    margin-bottom: 30px;
+}
+
+.form__label--title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form__label--item {
+    font-size: 16px;
+}
+
+.form__label--required {
+    background-color: #d60000;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.form__label--select {
+    color: #d60000;
+    font-size: 12px;
+    margin-left: auto;
+}
+
+.form__input--text input[type="text"],
+.form__input--text input[type="number"],
+.form__input--text textarea {
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 12px;
+    background-color: #fff;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.form__input--file input[type="file"] {
+    font-size: 14px;
+    padding: 4px 0;
+}
+
+.form__input--checkbox {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+.form__input--checkbox label {
+    font-size: 15px;
+}
+
+.form__error {
+    color: #d60000;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.form__button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.form__button a,
+.form__button--entry {
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.form__button a {
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+.form__button a:hover {
+    background-color: #d5d5d5;
+}
+
+.form__button--entry {
+    background-color: #ffd600;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.form__button--entry:hover {
+    background-color: #ffce00;
+}

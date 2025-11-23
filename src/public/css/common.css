@@ -1,0 +1,9 @@
+.header__inner {
+    padding: 10px 5px;
+    max-width: 1230px;
+}
+
+.header__logo {
+    text-decoration: none;
+    font-family: "Libre Baskerville", serif;
+}

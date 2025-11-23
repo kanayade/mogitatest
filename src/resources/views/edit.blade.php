@@ -1,0 +1,63 @@
+@extends('layouts.app')
+
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/edit.css') }}">
+@endsection
+
+@section('content')
+<div class="edit_container">
+    <a href="/products">商品一覧</a>
+    <h3 class="fruits_name">{{ $product->name }}</h3>
+    <form class="edit_form" action="{{ url('/products/' . $product->id .'/update') }}" method="post" enctype="multipart/form-data">
+        @csrf
+        @method('post')
+        <div class="fruits_detail">
+            <div class="fruits_image">
+                <img src="{{ asset('storage/product/' . $product->image) }}" alt="{{ $product->name }}">
+                    <input type="file" name="image">
+            </div>
+            <div class="form__group">
+                <div class="form__label--title">
+                    <label class="fruits_name">商品名</label>
+                    <input type="text" name="name" value="{{ old('name',$product->name) }}">
+                </div>
+                <div class="form__label--title">
+                    <label class="fruits_price">値段</label>
+                    <input type="number" name="price" value="{{ old('price',$product->price) }}">
+                </div>
+                <div class="form__label--title">
+                    <label class="season">季節</label>
+                    @foreach ($seasons as $season)
+                    <label>
+                        <input type="checkbox" name="seasons[]" value="{{ $season->id }}"
+                        @if ($product->seasons->contains('id',$season->id)) checked
+                        @endif >
+                        {{ $season->name }}
+                    </label>
+                    @endforeach
+                </div>
+                <div class="form__label--title">
+                    <label class="fruits_info">商品説明</label>
+                    <textarea name="description">{{ old('description',$product->description) }}</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="edit__button">
+            <a href="/products">戻る</a>
+            <button class="edit__button--keep" type="submit">変更を保存</button>
+        </div>
+    </form>
+    <div class="delete-area">
+        <form class="delete-form" action="{{ url('/products/' . $product->id .'/delete') }}" method="post">
+        @method('delete')
+        @csrf
+        <div class="delete-form__button">
+            <input type="hidden" name="id" value="{{ $product['id'] }}">
+            <button class="delete-btn" type="submit" title="削除">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </div>
+        </form>
+    </div>
+</div>
+@endsection

@@ -1,0 +1,152 @@
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.edit_container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.edit_container a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.fruits_name {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 20px 0 40px;
+}
+
+.fruits_detail {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.fruits_image {
+    text-align: center;
+}
+
+.fruits_image img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.fruits_image input[type="file"] {
+    display: block;
+    margin: 10px auto 0;
+    font-size: 14px;
+}
+
+.form__group {
+    flex: 2;
+}
+
+.form__label--title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form__label--title label {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.form__label--title input[type="text"],
+.form__label--title input[type="number"],
+.form__label--title textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 15px;
+    width: 100%;
+    background-color: #fff;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.form__label--title label input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.form__label--title .season label {
+    margin-right: 15px;
+    font-size: 15px;
+}
+
+.edit__button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.edit__button a,
+.edit__button--keep {
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.edit__button a {
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+.edit__button a:hover {
+    background-color: #d5d5d5;
+}
+
+.edit__button--keep {
+    background-color: #ffd600;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.edit__button--keep:hover {
+    background-color: #ffce00;
+}
+.edit_form + .delete-area {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -9%;
+}
+.delete-form__button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.delete-btn {
+    background-color: #ff5c5c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 18px;
+}
+
+.delete-btn:hover {
+    background-color: #e04b4b;
+}
