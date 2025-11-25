@@ -23,6 +23,7 @@
 % exit<br>
 .envファイルの修正<br>
 
+```diff
 // 前略
 
 DB_CONNECTION=mysql
@@ -37,6 +38,7 @@ DB_PORT=3306
 + DB_PASSWORD=laravel_pass
 
 // 後略
+```
 
 ### アプリケーションキー生成
 % php artisan key:generate<br>
