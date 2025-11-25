@@ -2,26 +2,38 @@
 
 ## 環境構築
 ### リポジトリの設定
-% mkdir mogitate<br>
-% cd mogitate<br>
-% git clone https://github.com/kanayade/mogitate-project<br>
+```
+% mkdir mogitate
+% cd mogitate
+% git clone https://github.com/kanayade/mogitate-project
+```
 オリジナルのリモートリポジトリを作成し、リモートリポジトリのurlを変更する。<br>
-% git remote set-url origin 作成したリポジトリのurl<br>
-% git remote -v<br>
+```
+% git remote set-url origin 作成したリポジトリのurl
+% git remote -v
+```
 ローカルリポジトリの内容をリモートに反映させる。<br>
-% git add .<br>
-% git commit -m "リモートリポジトリの変更"<br>
-% git push origin main<br>
+```
+% git add .
+% git commit -m "リモートリポジトリの変更"
+% git push origin main
+```
 ### Dockerの設定
-% docker-compose up -d --build<br>
+```
+% docker-compose up -d --build
 % code .
+```
 ### Laravelパッケージのインストール
-% docker-compose exec php bash<br>
+```
+% docker-compose exec php bash
 % composer install
+```
 ### .envファイルの作成
-% cp .env.example .env<br>
-% exit<br>
-.envファイルの修正<br>
+```
+% cp .env.example .env
+% exit
+```
+### .envファイルの修正
 
 ```diff
 // 前略
@@ -41,9 +53,13 @@ DB_PORT=3306
 ```
 
 ### アプリケーションキー生成
-% php artisan key:generate<br>
+```
+% php artisan key:generate
+```
 ### マイグレーション、シーディング
+```
 % php artisan migrate --seed
+```
 
 ## 使用技術（実行環境）
 ・PHP 8.2<br>
@@ -52,6 +68,8 @@ DB_PORT=3306
 ・Docker / Docker Compose<br>
 
 ## ER図
+![ER 図](mogitate.png)
+
 
 ## URL
 ・開発環境：http://localhost/<br>
