@@ -1,5 +1,4 @@
 services:
-platform: linux/x86_64
     nginx:
         image: nginx:1.21.1
         ports:
@@ -16,6 +15,7 @@ platform: linux/x86_64
             - ./src:/var/www/
 
     mysql:
+    platform: linux/amd64
         image: mysql:8.0.26
         environment:
             MYSQL_ROOT_PASSWORD: root
