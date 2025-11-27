@@ -1,5 +1,6 @@
 services:
     nginx:
+    platform: linux/amd64
         image: nginx:1.21.1
         ports:
             - "80:80"
@@ -10,6 +11,7 @@ services:
             - php
 
     php:
+    platform: linux/amd64
         build: ./docker/php
         volumes:
             - ./src:/var/www/
@@ -29,6 +31,7 @@ services:
             - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
 
     phpmyadmin:
+    platform: linux/amd64
         image: phpmyadmin/phpmyadmin
         environment:
             - PMA_ARBITRARY=1
