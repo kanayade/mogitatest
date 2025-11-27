@@ -11,13 +11,11 @@ services:
             - php
 
     php:
-    platform: linux/amd64
         build: ./docker/php
         volumes:
             - ./src:/var/www/
 
     mysql:
-    platform: linux/amd64
         image: mysql:8.0.26
         environment:
             MYSQL_ROOT_PASSWORD: root
@@ -31,7 +29,6 @@ services:
             - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
 
     phpmyadmin:
-    platform: linux/amd64
         image: phpmyadmin/phpmyadmin
         environment:
             - PMA_ARBITRARY=1
